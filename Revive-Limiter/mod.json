@@ -1,0 +1,9 @@
+{
+	"Name": "ReviveLimiter",
+	"Authors": ["Flash_Hit"],
+	"Description": "Limits the revives for each player + 15 secs cooldown.",
+	"URL": "none",
+	"Version": "0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}
