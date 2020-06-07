@@ -1,0 +1,9 @@
+{
+	"Name": "Admin can Mute Players",
+	"Authors": ["Flash_Hit"],
+	"Description": "Admin can Muting players.",
+	"URL": "none",
+	"Version": "0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}
