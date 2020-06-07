@@ -1,0 +1,9 @@
+{
+	"Name": "ADS FOV and Sensibility",
+	"Authors": ["Flash_Hit"],
+	"Description": "Clients can modify the fov for weapons(iron sights, kobra, rds) and pistols, same for the sensibility.",
+	"URL": "none",
+	"Version": "0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}
