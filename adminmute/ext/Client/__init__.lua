@@ -12,7 +12,7 @@ function AdminMuting:RegisterVars()
 	self.mutedPlayers = { }
 	self.playerFound = false
 	self.playerAlreadyMuted = false
-	self.playerId = nil
+	self.playerName = nil
 	self.isAdmin = false
 	self.admins = {"voteban_flash", "Flash_Hit"}
 
@@ -25,26 +25,31 @@ end
 
 function AdminMuting:RegisterEvents()
 	Hooks:Install('ClientChatManager:IncomingMessage', 1, self, self.OnCreateChatMessage)
+	NetEvents:Subscribe("Server:GetMutedPlayers", function(args)
+		print(args[1])
+		self.mutedPlayers = args
+		print(self.mutedPlayers[1])
+	end)
 	if self.isAdmin == true then
 		local admincommand = Console:Register('player', 'Admin Muting Player.', function(args)
-			self.playerId = nil
+			self.playerName = nil
 			for _,player in pairs(PlayerManager:GetPlayers()) do
 				if player.name == args[1] then
 					self.playerFound = true
-					self.playerId = player.id
+					self.playerName = player.name
 				end
 			end
 			if self.playerFound == true then
 				self.playerFound = false
 				for _,mutedPlayer in pairs(self.mutedPlayers) do
-					if mutedPlayer == self.playerId then	
+					if mutedPlayer == self.playerName then	
 						self.playerAlreadyMuted = true
 					end
 				end
 				if args[2] == "true" then
 					if self.playerAlreadyMuted == false then
-						local sendMuting = {}
-						sendMuting[1] = self.playerId
+						local sendMuting = { }
+						table.insert(sendMuting, self.playerName)
 						NetEvents:Send("Mute:Player", sendMuting)
 						return ('Player '..args[1].. " muted.")
 					elseif self.playerAlreadyMuted == true then
@@ -54,8 +59,8 @@ function AdminMuting:RegisterEvents()
 				elseif args[2] == "false" then
 					if self.playerAlreadyMuted == true then
 						for i,mutedPlayer in pairs(self.mutedPlayers) do
-							if mutedPlayer == self.playerId then
-								local sendUnmuting = {}
+							if mutedPlayer == self.playerName then
+								sendUnmuting = {}
 								sendUnmuting[1] = i
 								sendUnmuting[2] = mutedPlayer
 								NetEvents:Send("Unmute:Player", sendUnmuting)
@@ -73,6 +78,11 @@ function AdminMuting:RegisterEvents()
 				return ('Player '..args[1].. " not found.")
 			end
 		end)
+		local thelist = Console:Register('list', 'Lists muted players.', function(args)
+			for _,i in pairs(self.mutedPlayers) do
+				return (i)
+			end
+		end)
 	end
 		
 	NetEvents:Subscribe("Server:MutePlayer", function(args)
@@ -84,8 +94,9 @@ function AdminMuting:RegisterEvents()
 end
 		
 function AdminMuting:OnCreateChatMessage(hook, message, playerId, recipientMask, channelId, isSenderDead)
+	player = PlayerManager:GetPlayerById(playerId)
 	for _,mutedPlayer in pairs(self.mutedPlayers) do
-		if mutedPlayer == playerId and channelId~= 4 then
+		if mutedPlayer == player.name and channelId~= 4 then
 			hook:Return()
 		end
 	end
