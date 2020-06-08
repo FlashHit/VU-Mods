@@ -1,20 +1,33 @@
-class 'AdminMuting'
-function AdminMuting:__init()
+class 'AdminMute'
+
+function AdminMute:__init()
 	print("Initializing Admin Muting")
-	NetEvents:Subscribe("Mute:Player", player, self.OnMutePlayer)
-	NetEvents:Subscribe("Unmute:Player", player, self.OnUnmutePlayer)
+	
+	self:RegisterVars()
+	
+	self:RegisterEvents()
 end
 
-function AdminMuting:OnMutePlayer(player, args)
-	print("redirect to mute this player:".. args[1])
-	ChatManager:SendMessage("You are muted now.", PlayerManager:GetPlayerById(args[1]))
-	NetEvents:Broadcast("Server:MutePlayer", args)
+function AdminMute:RegisterVars()
+	self.mutedPlayers = { }
+
 end
 
-function AdminMuting:OnUnmutePlayer(player, args)
-	print("redirect to unmute this player:"..args[2])
-	ChatManager:SendMessage("You are unmuted now.", PlayerManager:GetPlayerById(args[2]))
-	NetEvents:Broadcast("Server:UnmutePlayer", args)
+function AdminMute:RegisterEvents()
+	Events:Subscribe('Player:Authenticated', function(player)
+		NetEvents:Broadcast("Server:GetMutedPlayers", self.mutedPlayers)
+	end)
+	
+	NetEvents:Subscribe("Mute:Player", function(player, args)
+		table.insert(self.mutedPlayers, args[1])
+		ChatManager:SendMessage("You got muted by admin.", PlayerManager:GetPlayerByName(args[1]))
+		NetEvents:Broadcast("Server:MutePlayer", args)
+	end)
+	NetEvents:Subscribe("Unmute:Player", function(player, args)
+		table.remove(self.mutedPlayers, args[1])
+		ChatManager:SendMessage("You got unmuted.", PlayerManager:GetPlayerByName(args[2]))
+		NetEvents:Broadcast("Server:UnmutePlayer", args)
+	end)
 end
 
-g_AdminMuting = AdminMuting()
+g_AdminMute = AdminMute()
