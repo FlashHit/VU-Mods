@@ -1,0 +1,9 @@
+{
+	"Name": "Advanced RCON",
+	"Authors": ["Flash_Hit"],
+	"Description": "Implements all VU Events + some Commands.",
+	"URL": "https://battlelog.battlefield.com/bf3/platoon/3307924585064219629/",
+	"Version": "1.0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}
