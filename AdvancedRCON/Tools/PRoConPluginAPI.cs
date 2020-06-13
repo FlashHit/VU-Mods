@@ -442,70 +442,70 @@ namespace PRoCon.Core.Plugin
         #region Venice Unleashed
 
         public virtual void OnPlayerRevive(string soldierName, string reviverName, bool isAdrenalineRevive) { }
-		public virtual void OnCapturePointCaptured(string strCaptureFlag, int teamId) { }
-		public virtual void OnCapturePointLost(string strCaptureFlag, int teamId) { }
-		public virtual void OnEngineInit() { }
-		public virtual void OnVeniceLevelLoaded(string strLevelName, string strGameMode, int round, int roundsPerMap) { }
-		public virtual void OnVenicePlayerAuthenticated(string strPlayerName, string strGuid, string strAccoutGuid, string strIpAddress) { }
-		public virtual void OnPlayerChangingWeapon(string strPlayerName, int teamId, string strWeaponName) { }
-		public virtual void OnVenicePlayerChat(string strPlayerName, string strRecipientMask, int teamId, int squadId, string strMessage) { }
-		public virtual void OnPlayerCreated(string strPlayerName) { }
-		public virtual void OnPlayerDestroyed(string strPlayerName) { }
-		public virtual void OnPlayerEnteredCapturePoint(string strPlayerName, int teamId, string strCapturePoint) { }
-		public virtual void OnPlayerInstantSuicide(string strPlayerName, int teamId) { }
-		public virtual void OnPlayerJoining(string strPlayerName, string strPlayerGuid, string strIpAddress, string strAccoutGuid) { }
-		public virtual void OnPlayerKickedFromSquad(string strPlayerName, int teamId, int squadId, string strSquadKicker) { }
-		public virtual void OnVenicePlayerKilled(string strPlayerName, string strKiller, float victimPosition_x, float victimPosition_y, float victimPosition_z, string strWeaponName, bool isRoadKill, bool isHeadShot, bool wasVictimInReviveState, float killerPosition_x, float killerPosition_y, float killerPosition_z) { }
-		public virtual void OnPlayerKitPickup(string strPlayerName, int teamId, string strPrimaryWeapon, string strSecondaryWeapon, string strGadget_1, string strGadget_2, string strGrenade, string strKnife) { }
-		public virtual void OnVenicePlayerLeft(string strPlayerName, int teamId) { }
-		public virtual void OnPlayerReload(string strPlayerName, string strWeaponName, float position_x, float position_y, float position_z) { }
-		public virtual void OnPlayerRespawn(string strPlayerName, int teamId, string strPrimaryWeapon, string strSecondaryWeapon, string strGadget_1, string strGadget_2, string strGrenade, string strKnife, float position_x, float position_y, float position_z) { }
-		public virtual void OnPlayerResupply(string strPlayerName, int givenMagsCount, string strSupplierName) { }
-		public virtual void OnPlayerReviveAccepted(string strPlayerName, string strReviverName) { }
-		public virtual void OnPlayerReviveRefused(string strPlayerName, int teamId) { }
-		public virtual void OnPlayerSetSquad(string strPlayerName, int teamId, int squadId) { }
-		public virtual void OnPlayerSetSquadLeader(string strPlayerName, int teamId, int squadId) { }
-		public virtual void OnPlayerSpawnAtVehicle(string strPlayerName, string strVehicleName) { }
-		public virtual void OnPlayerSpawnOnPlayer(string strPlayerName, string strPlayerToSpawnOn, int teamId, int squadId) { }
-		public virtual void OnPlayerSpawnOnSelectedSpawnPoint(string strPlayerName, int teamId, float position_x, float position_y, float position_z) { }
-		public virtual void OnVenicePlayerSquadChange(string strPlayerName, int teamId, int squadId) { }
-		public virtual void OnPlayerSuppressedEnemy(string strPlayerName, string strEnemyName) { }
-		public virtual void OnVenicePlayerTeamChange(string strPlayerName, int teamId, int squadId) { }
-		public virtual void OnPlayerUpdate(string strPlayerName, int playerId, int playerOnlineId, string strPlayerGuid, string strAccoutGuid, string strPlayerIp, int ping, bool isAlive, bool isSquadLeader, bool isSquadPrivate, bool hasSoldier, int teamId, int squadId, bool isAllowedToSpawn, int score, int kills, int deaths, string strPrimaryWeapon, string strSecondaryWeapon, string strGadget_1, string strGadget_2, string strGrenade, string strKnife, float position_x, float position_y, float position_z, float health, bool isDead, float deltaTime) { }
-		public virtual void OnPlayerUpdateInput(string strPlayerName, float deltaTime) { }
-		public virtual void OnVeniceServerRoundOver(float rountTime, int winningTeamId) { }
-		public virtual void OnServerRoundReset() { }
-		public virtual void OnSoldierHealthAction(string strPlayerName, int action) { }
-		public virtual void OnSoldierManDown(string strSoldierName, string strInflictorName) { }
-		public virtual void OnSoldierPrePhysicsUpdate(string strPlayerName, float deltaTime) { }
-		public virtual void OnVehicleDamage(string strVehicleName, double damage, string strDamageGiver) { }
-		public virtual void OnVehicleDestroyed(string strVehicleName, int points, int teamId) { }
-		public virtual void OnVehicleDisabled(string strVehicleName) { }
-		public virtual void OnVehicleEnter(string strVehicleName, string strPlayerName, int teamId) { }
-		public virtual void OnVehicleExit(string strVehicleName, string strPlayerName) { }
-		public virtual void OnVehicleSpawnDone(string strVehicleName) { }
-		public virtual void OnVehicleUnspawn(string strVehicleName) { }
-		
-		public virtual void OnEntityFactoryCreate() { }
-		public virtual void OnEntityFactoryCreateFromBlueprint() { }
-		public virtual void OnPlayerFindBestSquad(string strPlayerName) { }
-		public virtual void OnPlayerRequestJoin(string strJoinMode, string strAccoutGuid, string strPlayerGuid, string strPlayerName) { }
-		public virtual void OnPlayerSelectTeam(string strPlayerName, int teamId) { }
-		public virtual void OnServerSuppressEnemies(float suppressModifier) { }
-		public virtual void OnSoldierDamage(string strPlayerName, float damage, string strInflictorName, string strInflictorWeapon) { }
-		
-		public virtual void OnPlayerIsDead(string soldierName, bool isDead) { }
-		public virtual void OnPlayerIsRevivable(string soldierName, bool isRevivable) { }
-		
-		public virtual void OnModListAdd(string strModName) { }
-		public virtual void OnModListAvailableMods(List<string> lstAvailableMods) { }
-		public virtual void OnModListClear() { }
-		public virtual void OnModListDebug(bool enabled) { }
-		public virtual void OnModListList(List<string> lstMods) { }
-		public virtual void OnModListReloadExtensions() { }
-		public virtual void OnModListRemove(string strModName) { }
-		public virtual void OnModListSave() { }
-		public virtual void OnModListUnloadExtensions() { }
+	public virtual void OnCapturePointCaptured(string strCaptureFlag, int teamId) { }
+	public virtual void OnCapturePointLost(string strCaptureFlag, int teamId) { }
+	public virtual void OnEngineInit() { }
+	public virtual void OnVeniceLevelLoaded(string strLevelName, string strGameMode, int round, int roundsPerMap) { }
+	public virtual void OnVenicePlayerAuthenticated(string strPlayerName, string strGuid, string strAccoutGuid, string strIpAddress) { }
+	public virtual void OnPlayerChangingWeapon(string strPlayerName, int teamId, string strWeaponName) { }
+	public virtual void OnVenicePlayerChat(string strPlayerName, string strRecipientMask, int teamId, int squadId, string strMessage) { }
+	public virtual void OnPlayerCreated(string strPlayerName) { }
+	public virtual void OnPlayerDestroyed(string strPlayerName) { }
+	public virtual void OnPlayerEnteredCapturePoint(string strPlayerName, int teamId, string strCapturePoint) { }
+	public virtual void OnPlayerInstantSuicide(string strPlayerName, int teamId) { }
+	public virtual void OnPlayerJoining(string strPlayerName, string strPlayerGuid, string strIpAddress, string strAccoutGuid) { }
+	public virtual void OnPlayerKickedFromSquad(string strPlayerName, int teamId, int squadId, string strSquadKicker) { }
+	public virtual void OnVenicePlayerKilled(string strPlayerName, string strKiller, float victimPosition_x, float victimPosition_y, float victimPosition_z, string strWeaponName, bool isRoadKill, bool isHeadShot, bool wasVictimInReviveState, float killerPosition_x, float killerPosition_y, float killerPosition_z) { }
+	public virtual void OnPlayerKitPickup(string strPlayerName, int teamId, string strPrimaryWeapon, string strSecondaryWeapon, string strGadget_1, string strGadget_2, string strGrenade, string strKnife) { }
+	public virtual void OnVenicePlayerLeft(string strPlayerName, int teamId) { }
+	public virtual void OnPlayerReload(string strPlayerName, string strWeaponName, float position_x, float position_y, float position_z) { }
+	public virtual void OnPlayerRespawn(string strPlayerName, int teamId, string strPrimaryWeapon, string strSecondaryWeapon, string strGadget_1, string strGadget_2, string strGrenade, string strKnife, float position_x, float position_y, float position_z) { }
+	public virtual void OnPlayerResupply(string strPlayerName, int givenMagsCount, string strSupplierName) { }
+	public virtual void OnPlayerReviveAccepted(string strPlayerName, string strReviverName) { }
+	public virtual void OnPlayerReviveRefused(string strPlayerName, int teamId) { }
+	public virtual void OnPlayerSetSquad(string strPlayerName, int teamId, int squadId) { }
+	public virtual void OnPlayerSetSquadLeader(string strPlayerName, int teamId, int squadId) { }
+	public virtual void OnPlayerSpawnAtVehicle(string strPlayerName, string strVehicleName) { }
+	public virtual void OnPlayerSpawnOnPlayer(string strPlayerName, string strPlayerToSpawnOn, int teamId, int squadId) { }
+	public virtual void OnPlayerSpawnOnSelectedSpawnPoint(string strPlayerName, int teamId, float position_x, float position_y, float position_z) { }
+	public virtual void OnVenicePlayerSquadChange(string strPlayerName, int teamId, int squadId) { }
+	public virtual void OnPlayerSuppressedEnemy(string strPlayerName, string strEnemyName) { }
+	public virtual void OnVenicePlayerTeamChange(string strPlayerName, int teamId, int squadId) { }
+	public virtual void OnPlayerUpdate(string strPlayerName, int playerId, int playerOnlineId, string strPlayerGuid, string strAccoutGuid, string strPlayerIp, int ping, bool isAlive, bool isSquadLeader, bool isSquadPrivate, bool hasSoldier, int teamId, int squadId, bool isAllowedToSpawn, int score, int kills, int deaths, string strPrimaryWeapon, string strSecondaryWeapon, string strGadget_1, string strGadget_2, string strGrenade, string strKnife, float position_x, float position_y, float position_z, float health, bool isDead, float deltaTime) { }
+	public virtual void OnPlayerUpdateInput(string strPlayerName, float deltaTime) { }
+	public virtual void OnVeniceServerRoundOver(float rountTime, int winningTeamId) { }
+	public virtual void OnServerRoundReset() { }
+	public virtual void OnSoldierHealthAction(string strPlayerName, int action) { }
+	public virtual void OnSoldierManDown(string strSoldierName, string strInflictorName) { }
+	public virtual void OnSoldierPrePhysicsUpdate(string strPlayerName, float deltaTime) { }
+	public virtual void OnVehicleDamage(string strVehicleName, double damage, string strDamageGiver) { }
+	public virtual void OnVehicleDestroyed(string strVehicleName, int points, int teamId) { }
+	public virtual void OnVehicleDisabled(string strVehicleName) { }
+	public virtual void OnVehicleEnter(string strVehicleName, string strPlayerName, int teamId) { }
+	public virtual void OnVehicleExit(string strVehicleName, string strPlayerName) { }
+	public virtual void OnVehicleSpawnDone(string strVehicleName) { }
+	public virtual void OnVehicleUnspawn(string strVehicleName) { }
+
+	public virtual void OnEntityFactoryCreate() { }
+	public virtual void OnEntityFactoryCreateFromBlueprint() { }
+	public virtual void OnPlayerFindBestSquad(string strPlayerName) { }
+	public virtual void OnPlayerRequestJoin(string strJoinMode, string strAccoutGuid, string strPlayerGuid, string strPlayerName) { }
+	public virtual void OnPlayerSelectTeam(string strPlayerName, int teamId) { }
+	public virtual void OnServerSuppressEnemies(float suppressModifier) { }
+	public virtual void OnSoldierDamage(string strPlayerName, float damage, string strInflictorName, string strInflictorWeapon) { }
+
+	public virtual void OnPlayerIsDead(string soldierName, bool isDead) { }
+	public virtual void OnPlayerIsRevivable(string soldierName, bool isRevivable) { }
+
+	public virtual void OnModListAdd(string strModName) { }
+	public virtual void OnModListAvailableMods(List<string> lstAvailableMods) { }
+	public virtual void OnModListClear() { }
+	public virtual void OnModListDebug(bool enabled) { }
+	public virtual void OnModListList(List<string> lstMods) { }
+	public virtual void OnModListReloadExtensions() { }
+	public virtual void OnModListRemove(string strModName) { }
+	public virtual void OnModListSave() { }
+	public virtual void OnModListUnloadExtensions() { }
 		
         #endregion
 
