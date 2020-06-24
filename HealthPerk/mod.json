@@ -1,0 +1,9 @@
+{
+	"Name": "HealthPerk",
+	"Authors": ["Flash_Hit"],
+	"Description": "Unlocks the Health perk for all classes.",
+	"URL": "https://battlelog.battlefield.com/bf3/platoon/3307924585064219629/",
+	"Version": "0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}
