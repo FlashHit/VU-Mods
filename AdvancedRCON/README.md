@@ -7,7 +7,7 @@
 | currentLevel                |
 | player.isDead         | Player      | 
 | player.isRevivable        | Player      | 
-| textChatModerationList.addPlayer                 | admin/muted/voice | Player |
+| textChatModerationList.addPlayer                 | admin/voice/muted | Player |
 | textChatModerationList.clear        |
 | textChatModerationList.list       | 
 | textChatModerationList.load       | 
