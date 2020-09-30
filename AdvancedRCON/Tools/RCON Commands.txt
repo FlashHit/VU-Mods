@@ -9,10 +9,20 @@ textChatModerationList.clear
 textChatModerationList.list
 textChatModerationList.load
 textChatModerationList.removePlayer <playerName>
+textChatModerationList.save
 vars.textChatModerationMode <free/moderated/muted>	default = "free"
 vars.textChatSpamCoolDownTime <coolDownTime> 		default = 30
 vars.textChatSpamDetectionTime <detectionTime> 		default = 6.0
 vars.textChatSpamTriggerCount <triggerCount> 		default = 6
+
+vars.unlockMode <all/blacklist/whitelist>
+unlockList.add <weapon/attachment/vehicle>		Use the unlockList Generator
+unlockList.clear
+unlockList.list
+unlockList.load
+unlockList.remove <weapon/attachment/vehicle>
+unlockList.save
+unlockList.set <weapons/attachments/vehicles>
 
 vu.Event <eventName> <false/true>			default = false
 
