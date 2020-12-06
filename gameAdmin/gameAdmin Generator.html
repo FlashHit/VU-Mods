@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<script>
+			function generate(){
+				if(document.getElementById("playerName").value != null)
+				{
+					document.getElementById("generation").innerHTML = '<span>gameAdmin.add '+document.getElementById("playerName").value+'</span>';
+				}
+				
+				const checkboxes = document.querySelectorAll('input[name="adminRights"]');
+				const num = checkboxes.length;
+				for (let i=0; i < num; i++) {
+					if (checkboxes[i].checked === true) {
+						document.getElementById("generation").innerHTML += '<span> true</span>';
+					}else{
+						document.getElementById("generation").innerHTML += '<span> false</span>';
+					}
+				}	
+				document.getElementById("generation").style.display = 'block';
+			}
+		</script>
+	</head>
+	<body>
+		<p>Playername:</p>
+		<input type="textfield" id="playerName">
+		<p>Admin rights:</p>
+		<input type="checkbox" id="canMovePlayers" name="adminRights"><label for="canMovePlayers">canMovePlayers</label><br>
+		<input type="checkbox" id="canKillPlayers" name="adminRights"><label for="canKillPlayers">canKillPlayers</label><br>
+		<input type="checkbox" id="canKickPlayers" name="adminRights"><label for="canKickPlayers">canKickPlayers</label><br>
+		<input type="checkbox" id="canTemporaryBanPlayers" name="adminRights"><label for="canTemporaryBanPlayers">canTemporaryBanPlayers</label><br>
+		<input type="checkbox" id="canPermanentlyBanPlayers" name="adminRights"><label for="canPermanentlyBanPlayers">canPermanentlyBanPlayers</label><br>
+		<input type="checkbox" id="canEditGameAdminList" name="adminRights"><label for="canEditGameAdminList">canEditGameAdminList</label><br>
+		<input type="checkbox" id="canEditBanList" name="adminRights"><label for="canEditBanList">canEditBanList</label><br>
+		<input type="checkbox" id="canEditMapList" name="adminRights"><label for="canEditMapList">canEditMapList</label><br>
+		<input type="checkbox" id="canUseMapFunctions" name="adminRights"><label for="canUseMapFunctions">canUseMapFunctions</label><br>
+		<input type="checkbox" id="canAlterServerSettings" name="adminRights"><label for="canAlterServerSettings">canAlterServerSettings</label><br>
+		<input type="checkbox" id="canEditReservedSlotsList" name="adminRights"><label for="canEditReservedSlotsList">canEditReservedSlotsList</label><br>
+		<input type="checkbox" id="canEditTextChatModerationList" name="adminRights"><label for="canEditTextChatModerationList">canEditTextChatModerationList</label><br>
+		<input type="checkbox" id="canShutdownServer" name="adminRights"><label for="canShutdownServer">canShutdownServer</label><br>
+		<br>
+		<button onclick="generate()">Generate</button><br>
+		<br>
+		<div id="generation"></div>
+	</body>
+</html>
