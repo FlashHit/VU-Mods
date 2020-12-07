@@ -51,4 +51,4 @@ The mod provides following RCON commands:
 
 You can use the html to generate the RCON gameAdmin.add command.
 
-A simple example mod that makes use of this is the InGameAdmin mod.
+A simple example mod that makes use of this is the <a href="https://github.com/FlashHit/VU-Mods/tree/master/InGameAdmin">InGameAdmin</a> mod.
