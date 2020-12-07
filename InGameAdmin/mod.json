@@ -1,0 +1,13 @@
+{
+	"Name": "InGameAdmin",
+	"Authors": ["Flash_Hit"],
+	"Description": "Basic InGameAdmin commands",
+	"URL": "none",
+	"Version": "1.0.0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true,
+	"Dependencies": {
+        "veniceext": "^1.0.0",
+		"gameAdmin": "^1.0.0"
+	}
+}
