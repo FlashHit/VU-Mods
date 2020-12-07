@@ -50,5 +50,6 @@ The mod provides following RCON commands:
 ```
 
 You can use the html to generate the RCON gameAdmin.add command.
+<img src="https://image.prntscr.com/image/tbYyfnI3QJeI2s_fQAdq9A.jpeg"/>
 
 A simple example mod that makes use of this is the <a href="https://github.com/FlashHit/VU-Mods/tree/master/InGameAdmin">InGameAdmin</a> mod.
