@@ -26,7 +26,12 @@ RCON:RegisterCommand('gameAdmin.add', RemoteCommandFlag.RequiresLogin, function(
 			return {'InvalidArguments'}
 		end
 	end
-	
+	local logString = ""
+	if adminList[name] == nil then
+		logString = "ADD: Player " .. name .. "is now admin with following abilities:"
+	else
+		logString = "UPDATE: Player " .. name .. "is now admin with following abilities:"
+	end
 	-- create the table for that player
 	adminList[name] = {
 		abilityCount = tempAbilityCount,
@@ -49,45 +54,61 @@ RCON:RegisterCommand('gameAdmin.add', RemoteCommandFlag.RequiresLogin, function(
 	
 	-- generate the RCON response. We only want to see the player name, the abilityCount and the ability names.
 	local response = {'OK',name, tostring(tempAbilityCount)}
+	
 	if args[1] == true then
 		table.insert(response, "canMovePlayers")
+		logString = logString .. " canMovePlayers"
 	end
 	if args[2] == true then
 		table.insert(response, "canKillPlayers")
+		logString = logString .. " canKillPlayers"
 	end
 	if args[3] == true then
 		table.insert(response, "canKickPlayers")
+		logString = logString .. " canKickPlayers"
 	end
 	if args[4] == true then
 		table.insert(response, "canTemporaryBanPlayers")
+		logString = logString .. " canTemporaryBanPlayers"
 	end
 	if args[5] == true then
 		table.insert(response, "canPermanentlyBanPlayers")
+		logString = logString .. " canPermanentlyBanPlayers"
 	end
 	if args[6] == true then
 		table.insert(response, "canEditGameAdminList")
+		logString = logString .. " canEditGameAdminList"
 	end
 	if args[7] == true then
 		table.insert(response, "canEditBanList")
+		logString = logString .. " canEditBanList"
 	end
 	if args[8] == true then
 		table.insert(response, "canEditMapList")
+		logString = logString .. " canEditMapList"
 	end
 	if args[9] == true then
 		table.insert(response, "canUseMapFunctions")
+		logString = logString .. " canUseMapFunctions"
 	end
 	if args[10] == true then
 		table.insert(response, "canAlterServerSettings")
+		logString = logString .. " canAlterServerSettings"
 	end
 	if args[11] == true then
 		table.insert(response, "canEditReservedSlotsList")
+		logString = logString .. " canEditReservedSlotsList"
 	end
 	if args[12] == true then
 		table.insert(response, "canEditTextChatModerationList")
+		logString = logString .. " canEditTextChatModerationList"
 	end
 	if args[13] == true then
 		table.insert(response, "canShutdownServer")
+		logString = logString .. " canShutdownServer"
 	end
+	
+	print(logString)
 	
 	return response
 	
@@ -100,6 +121,8 @@ RCON:RegisterCommand('gameAdmin.clear', RemoteCommandFlag.RequiresLogin, functio
 
 	-- clear the adminList table and return 'OK'
 	adminList = {}
+	
+	print("CLEAR - Admin list has been cleared.")
 	return {'OK'}
 end)
 
@@ -171,6 +194,7 @@ RCON:RegisterCommand('gameAdmin.remove', RemoteCommandFlag.RequiresLogin, functi
 	
 	-- remove the admin from adminList
 	adminList[args[1]] = nil
+	print("REMOVE - Player " .. args[1] .. " has been removed from admin list.")
 	return {'OK'}
 
 end)
@@ -225,6 +249,7 @@ RCON:RegisterCommand('gameAdmin.save', RemoteCommandFlag.RequiresLogin, function
 	end
 
 	SQL:Close()
+	print("SAVE - The admin list has been saved.")
 	return {'OK'}
 end)
 RCON:RegisterCommand('gameAdmin.load', RemoteCommandFlag.RequiresLogin, function(command, args, loggedIn)
@@ -286,6 +311,7 @@ RCON:RegisterCommand('gameAdmin.load', RemoteCommandFlag.RequiresLogin, function
 			Events:Dispatch('GameAdmin:Player', name, adminList[name])
 	end
 	SQL:Close()
+	print("LOAD - The admin list has been loaded.")
 	return {'OK'}
 end)
 
