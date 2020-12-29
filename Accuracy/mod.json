@@ -1,0 +1,9 @@
+{
+	"Name": "Accuracy",
+	"Authors": ["Flash_Hit"],
+	"Description": "Use console to get current accuracy.",
+	"URL": "none",
+	"Version": "1.0.0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}
