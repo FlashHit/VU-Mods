@@ -306,7 +306,50 @@ RCON:RegisterCommand('gameAdmin.load', RemoteCommandFlag.RequiresLogin, function
 			end
 		end
 		adminList[name] = row
-		
+		local logAdminLoaded = "ADMIN - " .. name .. " " .. tostring(row["abilityCount"])
+		for admin,abilities in pairs(adminList) do
+			-- and every ability name
+			if abilities.canMovePlayers == true then
+				logAdminLoaded = logAdminLoaded .. " canMovePlayers"
+			end
+			if abilities.canKillPlayers == true then
+				printAdmin = printAdmin .. " canKillPlayers"
+			end
+			if abilities.canKickPlayers == true then
+				printAdmin = printAdmin .. " canKickPlayers"
+			end
+			if abilities.canTemporaryBanPlayers == true then
+				printAdmin = printAdmin .. " canTemporaryBanPlayers"
+			end
+			if abilities.canPermanentlyBanPlayers == true then
+				printAdmin = printAdmin .. " canPermanentlyBanPlayers"
+			end
+			if abilities.canEditGameAdminList == true then
+				printAdmin = printAdmin .. " canEditGameAdminList"
+			end
+			if abilities.canEditBanList == true then
+				printAdmin = printAdmin .. " canEditBanList"
+			end
+			if abilities.canEditMapList == true then
+				printAdmin = printAdmin .. " canEditMapList"
+			end
+			if abilities.canUseMapFunctions == true then
+				printAdmin = printAdmin .. " canUseMapFunctions"
+			end
+			if abilities.canAlterServerSettings == true then
+				printAdmin = printAdmin .. " canAlterServerSettings"
+			end
+			if abilities.canEditReservedSlotsList == true then
+				printAdmin = printAdmin .. " canEditReservedSlotsList"
+			end
+			if abilities.canEditTextChatModerationList == true then
+				printAdmin = printAdmin .. " canEditTextChatModerationList"
+			end
+			if abilities.canShutdownServer == true then
+				printAdmin = printAdmin .. " canShutdownServer"
+			end
+		end
+		print(logAdminLoaded)
 		-- Copy from gameAdmin.add
 			Events:Dispatch('GameAdmin:Player', name, adminList[name])
 	end
