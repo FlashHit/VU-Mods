@@ -313,40 +313,40 @@ RCON:RegisterCommand('gameAdmin.load', RemoteCommandFlag.RequiresLogin, function
 				logAdminLoaded = logAdminLoaded .. " canMovePlayers"
 			end
 			if abilities.canKillPlayers == true then
-				printAdmin = printAdmin .. " canKillPlayers"
+				logAdminLoaded = logAdminLoaded .. " canKillPlayers"
 			end
 			if abilities.canKickPlayers == true then
-				printAdmin = printAdmin .. " canKickPlayers"
+				logAdminLoaded = logAdminLoaded .. " canKickPlayers"
 			end
 			if abilities.canTemporaryBanPlayers == true then
-				printAdmin = printAdmin .. " canTemporaryBanPlayers"
+				logAdminLoaded = logAdminLoaded .. " canTemporaryBanPlayers"
 			end
 			if abilities.canPermanentlyBanPlayers == true then
-				printAdmin = printAdmin .. " canPermanentlyBanPlayers"
+				logAdminLoaded = logAdminLoaded .. " canPermanentlyBanPlayers"
 			end
 			if abilities.canEditGameAdminList == true then
-				printAdmin = printAdmin .. " canEditGameAdminList"
+				logAdminLoaded = logAdminLoaded .. " canEditGameAdminList"
 			end
 			if abilities.canEditBanList == true then
-				printAdmin = printAdmin .. " canEditBanList"
+				logAdminLoaded = logAdminLoaded .. " canEditBanList"
 			end
 			if abilities.canEditMapList == true then
-				printAdmin = printAdmin .. " canEditMapList"
+				logAdminLoaded = logAdminLoaded .. " canEditMapList"
 			end
 			if abilities.canUseMapFunctions == true then
-				printAdmin = printAdmin .. " canUseMapFunctions"
+				logAdminLoaded = logAdminLoaded .. " canUseMapFunctions"
 			end
 			if abilities.canAlterServerSettings == true then
-				printAdmin = printAdmin .. " canAlterServerSettings"
+				logAdminLoaded = logAdminLoaded .. " canAlterServerSettings"
 			end
 			if abilities.canEditReservedSlotsList == true then
-				printAdmin = printAdmin .. " canEditReservedSlotsList"
+				logAdminLoaded = logAdminLoaded .. " canEditReservedSlotsList"
 			end
 			if abilities.canEditTextChatModerationList == true then
-				printAdmin = printAdmin .. " canEditTextChatModerationList"
+				logAdminLoaded = logAdminLoaded .. " canEditTextChatModerationList"
 			end
 			if abilities.canShutdownServer == true then
-				printAdmin = printAdmin .. " canShutdownServer"
+				logAdminLoaded = logAdminLoaded .. " canShutdownServer"
 			end
 		end
 		print(logAdminLoaded)
