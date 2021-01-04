@@ -4,7 +4,7 @@
 			function generate(){
 				if(document.getElementById("playerName").value != null)
 				{
-					document.getElementById("generation").innerHTML = '<span>gameAdmin.add '+document.getElementById("playerName").value+'</span>';
+					document.getElementById("generation").innerHTML = '<span>gameAdmin.add "'+document.getElementById("playerName").value+'"</span>';
 				}
 				
 				const checkboxes = document.querySelectorAll('input[name="adminRights"]');
