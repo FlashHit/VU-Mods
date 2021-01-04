@@ -307,48 +307,48 @@ RCON:RegisterCommand('gameAdmin.load', RemoteCommandFlag.RequiresLogin, function
 		end
 		adminList[name] = row
 		local logAdminLoaded = "ADMIN - " .. name .. " " .. tostring(row["abilityCount"])
-		for admin,abilities in pairs(adminList) do
-			-- and every ability name
-			if abilities.canMovePlayers == true then
-				logAdminLoaded = logAdminLoaded .. " canMovePlayers"
-			end
-			if abilities.canKillPlayers == true then
-				logAdminLoaded = logAdminLoaded .. " canKillPlayers"
-			end
-			if abilities.canKickPlayers == true then
-				logAdminLoaded = logAdminLoaded .. " canKickPlayers"
-			end
-			if abilities.canTemporaryBanPlayers == true then
-				logAdminLoaded = logAdminLoaded .. " canTemporaryBanPlayers"
-			end
-			if abilities.canPermanentlyBanPlayers == true then
-				logAdminLoaded = logAdminLoaded .. " canPermanentlyBanPlayers"
-			end
-			if abilities.canEditGameAdminList == true then
-				logAdminLoaded = logAdminLoaded .. " canEditGameAdminList"
-			end
-			if abilities.canEditBanList == true then
-				logAdminLoaded = logAdminLoaded .. " canEditBanList"
-			end
-			if abilities.canEditMapList == true then
-				logAdminLoaded = logAdminLoaded .. " canEditMapList"
-			end
-			if abilities.canUseMapFunctions == true then
-				logAdminLoaded = logAdminLoaded .. " canUseMapFunctions"
-			end
-			if abilities.canAlterServerSettings == true then
-				logAdminLoaded = logAdminLoaded .. " canAlterServerSettings"
-			end
-			if abilities.canEditReservedSlotsList == true then
-				logAdminLoaded = logAdminLoaded .. " canEditReservedSlotsList"
-			end
-			if abilities.canEditTextChatModerationList == true then
-				logAdminLoaded = logAdminLoaded .. " canEditTextChatModerationList"
-			end
-			if abilities.canShutdownServer == true then
-				logAdminLoaded = logAdminLoaded .. " canShutdownServer"
-			end
+			
+		local abilities = adminList[name]
+		if abilities.canMovePlayers == true then
+			logAdminLoaded = logAdminLoaded .. " canMovePlayers"
 		end
+		if abilities.canKillPlayers == true then
+			logAdminLoaded = logAdminLoaded .. " canKillPlayers"
+		end
+		if abilities.canKickPlayers == true then
+			logAdminLoaded = logAdminLoaded .. " canKickPlayers"
+		end
+		if abilities.canTemporaryBanPlayers == true then
+			logAdminLoaded = logAdminLoaded .. " canTemporaryBanPlayers"
+		end
+		if abilities.canPermanentlyBanPlayers == true then
+			logAdminLoaded = logAdminLoaded .. " canPermanentlyBanPlayers"
+		end
+		if abilities.canEditGameAdminList == true then
+			logAdminLoaded = logAdminLoaded .. " canEditGameAdminList"
+		end
+		if abilities.canEditBanList == true then
+			logAdminLoaded = logAdminLoaded .. " canEditBanList"
+		end
+		if abilities.canEditMapList == true then
+			logAdminLoaded = logAdminLoaded .. " canEditMapList"
+		end
+		if abilities.canUseMapFunctions == true then
+			logAdminLoaded = logAdminLoaded .. " canUseMapFunctions"
+		end
+		if abilities.canAlterServerSettings == true then
+			logAdminLoaded = logAdminLoaded .. " canAlterServerSettings"
+		end
+		if abilities.canEditReservedSlotsList == true then
+			logAdminLoaded = logAdminLoaded .. " canEditReservedSlotsList"
+		end
+		if abilities.canEditTextChatModerationList == true then
+			logAdminLoaded = logAdminLoaded .. " canEditTextChatModerationList"
+		end
+		if abilities.canShutdownServer == true then
+			logAdminLoaded = logAdminLoaded .. " canShutdownServer"
+		end
+		
 		print(logAdminLoaded)
 		-- Copy from gameAdmin.add
 			Events:Dispatch('GameAdmin:Player', name, adminList[name])
