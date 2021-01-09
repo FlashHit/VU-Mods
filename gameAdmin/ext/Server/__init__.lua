@@ -358,4 +358,8 @@ RCON:RegisterCommand('gameAdmin.load', RemoteCommandFlag.RequiresLogin, function
 	return {'OK'}
 end)
 
+Events:Subscribe('GetGameAdminList', function()
+	Events:Dispatch('GameAdmin:List', adminList)
+end)
+
 RCON:SendCommand('gameAdmin.load')
