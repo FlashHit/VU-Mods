@@ -3,7 +3,7 @@
 	"Authors": ["Flash_Hit"],
 	"Description": "RCON commands for gameAdmin.* with Events:Dispatch.",
 	"URL": "none",
-	"Version": "1.0.3",
+	"Version": "1.0.4",
 	"HasWebUI": false,
 	"HasVeniceEXT": true
 }
