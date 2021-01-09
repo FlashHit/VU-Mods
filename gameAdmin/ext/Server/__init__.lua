@@ -5,6 +5,7 @@ local done = false
 local levelLoaded = Events:Subscribe('Level:Loaded', function()
 	if not done then
 		RCON:SendCommand('gameAdmin.load')
+		done = true
 	end
 end)
 
