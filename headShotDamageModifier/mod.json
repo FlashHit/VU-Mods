@@ -1,0 +1,9 @@
+{
+	"Name": "HeadShot Damage Modifier",
+	"Authors": ["Flash_Hit"],
+	"Description": "Gives each weapon tripple damage for head.",
+	"URL": "none",
+	"Version": "1.0.0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}
