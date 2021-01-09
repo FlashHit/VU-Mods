@@ -1,8 +1,11 @@
 local adminList = {}
 
+local done = false
 
 local levelLoaded = Events:Subscribe('Level:Loaded', function()
-	RCON:SendCommand('gameAdmin.load')
+	if not done then
+		RCON:SendCommand('gameAdmin.load')
+	end
 end)
 
 RCON:RegisterCommand('gameAdmin.add', RemoteCommandFlag.RequiresLogin, function(command, args, loggedIn)
@@ -258,11 +261,7 @@ RCON:RegisterCommand('gameAdmin.save', RemoteCommandFlag.RequiresLogin, function
 	return {'OK'}
 end)
 RCON:RegisterCommand('gameAdmin.load', RemoteCommandFlag.RequiresLogin, function(command, args, loggedIn)
-	if levelLoaded ~= nil then
-		levelLoaded:Unsubscribe()
-		levelLoaded = nil
-	end
-		
+	
 	if not SQL:Open() then
 		return
 	end
