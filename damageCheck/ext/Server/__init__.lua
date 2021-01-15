@@ -32,5 +32,5 @@ end)
 
 Events:Subscribe('Level:Destroy', function()
 	boneToMaterialMap = nil
-    materialGrid = nil
+	materialGrid = nil
 end)
