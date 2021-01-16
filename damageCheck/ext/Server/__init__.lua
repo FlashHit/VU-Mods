@@ -50,7 +50,7 @@ end)
 
 Events:Subscribe('Level:Loaded', function(levelName, gameMode, round, roundsPerMap)
 	materialGrid = MaterialGridData(ResourceManager:SearchForDataContainer(SharedUtils:GetLevelName() .. "/MaterialGrid_Win32/Grid"))
-	boneToMaterialMap = { materialGrid.materialIndexMap[158+1], materialGrid.materialIndexMap[66+1], materialGrid.materialIndexMap[67+1], materialGrid.materialIndexMap[67+1], materialGrid.materialIndexMap[91+1], materialGrid.materialIndexMap[91+1] }
+	boneToMaterialMap = { materialGrid.materialIndexMap[158+1], materialGrid.materialIndexMap[65+1], materialGrid.materialIndexMap[66+1], materialGrid.materialIndexMap[66+1], materialGrid.materialIndexMap[91+1], materialGrid.materialIndexMap[91+1] }
 end)
 
 Events:Subscribe('Level:Destroy', function()
