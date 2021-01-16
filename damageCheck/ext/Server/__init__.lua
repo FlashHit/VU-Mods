@@ -17,7 +17,11 @@ Hooks:Install('Soldier:Damage', 1, function(hook, soldier, info, giverInfo)
 		if giverInfo.giver.soldier.weaponsComponent.currentWeapon.weaponModifier.weaponProjectileModifier ~= nil and giverInfo.giver.soldier.weaponsComponent.currentWeapon.weaponModifier.weaponProjectileModifier.projectileData ~= nil then
 			bullet = BulletEntityData(giverInfo.giver.soldier.weaponsComponent.currentWeapon.weaponModifier.weaponProjectileModifier.projectileData)
 		end
-		local materialGridItems = MaterialInteractionGridRow(materialGrid.interactionGrid[materialGrid.materialIndexMap[bullet.materialPair.physicsPropertyIndex+1]+1]).items
+		local materialIndexMapIndex = bullet.materialPair.physicsPropertyIndex
+		if materialIndexMapIndex < 0 then
+			materialIndexMapIndex = 255 + materialIndexMapIndex
+		end
+		local materialGridItems = MaterialInteractionGridRow(materialGrid.interactionGrid[materialGrid.materialIndexMap[materialIndexMapIndex+1]+1]).items
 		local multiplier = MaterialRelationDamageData(materialGridItems[boneToMaterialMap[info.boneIndex+1]+1].physicsPropertyProperties[1]).damageProtectionMultiplier
 		local damageLimit = bullet.startDamage * multiplier 
 		
