@@ -1,6 +1,6 @@
 {
 	"Name": "DamageCheck",
-	"Authors": ["Flash_Hit"],
+	"Authors": ["Flash_Hit", "MajorVictory"],
 	"Description": "Checks if the damage is correct and adjusts it if not.",
 	"URL": "none",
 	"Version": "1.0.0",
