@@ -19,7 +19,7 @@ Hooks:Install('Soldier:Damage', 1, function(hook, soldier, info, giverInfo)
 		end
 		local materialIndexMapIndex = bullet.materialPair.physicsPropertyIndex
 		if materialIndexMapIndex < 0 then
-			materialIndexMapIndex = 255 + materialIndexMapIndex
+			materialIndexMapIndex = 256 + materialIndexMapIndex
 		end
 		local materialGridItems = MaterialInteractionGridRow(materialGrid.interactionGrid[materialGrid.materialIndexMap[materialIndexMapIndex+1]+1]).items
 		local multiplier = MaterialRelationDamageData(materialGridItems[boneToMaterialMap[info.boneIndex+1]+1].physicsPropertyProperties[1]).damageProtectionMultiplier
