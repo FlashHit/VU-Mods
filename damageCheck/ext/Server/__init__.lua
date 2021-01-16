@@ -27,7 +27,7 @@ Hooks:Install('Soldier:Damage', 1, function(hook, soldier, info, giverInfo)
 
 		elseif (shotDistance > bullet.damageFalloffStartDistance) then
 			
-			local damageFalloffMax = (bullet.endDamage - bullet.startDamage)
+			local damageFalloffMax = (bullet.startDamage - bullet.endDamage)
 			-- 25.0 - 18.4 = 6.6
 			
 			local distanceRange = (bullet.damageFalloffEndDistance - bullet.damageFalloffStartDistance)
