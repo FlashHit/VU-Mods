@@ -2,7 +2,7 @@ local materialGrid = nil
 local boneToMaterialMap = nil
 		
 Hooks:Install('Soldier:Damage', 1, function(hook, soldier, info, giverInfo)
-	if giverInfo == nil or giverInfo.weaponFiring == nil then -- or giverInfo.giver == nil 
+	if giverInfo == nil or giverInfo.weaponFiring == nil or giverInfo.giver == nil or giverInfo.giver.soldier == nil then
 		return
 	end
 	if giverInfo.assist ~= nil then 
