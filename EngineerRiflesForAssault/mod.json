@@ -1,0 +1,9 @@
+{
+	"Name": "Engineer Rifles for Assault",
+	"Authors": ["Flash_Hit"],
+	"Description": "Adds all Engineer Rifles to the Assault class.",
+	"URL": "",
+	"Version": "1.0.0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}
