@@ -42,7 +42,7 @@ Hooks:Install('Soldier:Damage', 1, function(hook, soldier, info, giverInfo)
 		end
 		
 		if (damageLimit < info.damage - 0.5) then
-			info.damage = bullet.endDamage * multiplier
+			info.damage = damageLimit
 			hook:Pass(soldier, info, giverInfo)
 		end
 	end
