@@ -18,31 +18,8 @@ Hooks:Install('Soldier:Damage', 1, function(hook, soldier, info, giverInfo)
 		local multiplier = MaterialRelationDamageData(materialGridItems[boneToMaterialMap[info.boneIndex+1]+1].physicsPropertyProperties[1]).damageProtectionMultiplier
 		local damageLimit = bullet.startDamage * multiplier 
 		
-		
-		local shotDistance = info.position:Distance(info.origin)
-		
-		if (shotDistance >= bullet.damageFalloffEndDistance) then
-
-			damageLimit = bullet.endDamage * multiplier
-
-		elseif (shotDistance > bullet.damageFalloffStartDistance) then
-			
-			local damageFalloffMax = (bullet.startDamage - bullet.endDamage)
-			-- 25.0 - 18.4 = 6.6
-			
-			local distanceRange = (bullet.damageFalloffEndDistance - bullet.damageFalloffStartDistance)
-			-- 50.0 - 8.0 = 42.0
-			
-			local distancePercentage = (shotDistance - bullet.damageFalloffStartDistance) / distanceRange
-			-- 50.0 - 8.0 / 42.0 = 1.00
-			
-			damageLimit = bullet.startDamage - (damageFalloffMax * distancePercentage) * multiplier
-			-- 25.0 - (6.6 * 1.00) * 1.0 = 18.4
-		
-		end
-		
 		if (damageLimit < info.damage - 0.5) then
-			info.damage = damageLimit
+			info.damage = bullet.endDamage * multiplier
 			hook:Pass(soldier, info, giverInfo)
 		end
 	end
