@@ -14,6 +14,8 @@ Hooks:Install('Soldier:Damage', 1, function(hook, soldier, info, giverInfo)
 	local bullet = BulletEntityData(WeaponFiringData(giverInfo.weaponFiring).primaryFire.shot.projectileData)
 	if giverInfo.giver.soldier.weaponsComponent.currentWeapon.weaponModifier.weaponProjectileModifier ~= nil and giverInfo.giver.soldier.weaponsComponent.currentWeapon.weaponModifier.weaponProjectileModifier.projectileData ~= nil then
 		bullet = BulletEntityData(giverInfo.giver.soldier.weaponsComponent.currentWeapon.weaponModifier.weaponProjectileModifier.projectileData)
+	elseif giverInfo.giver.soldier.weaponsComponent.currentWeapon.weaponModifier.weaponFiringDataModifier ~= nil and giverInfo.giver.soldier.weaponsComponent.currentWeapon.weaponModifier.weaponFiringDataModifier.weaponFiring ~= nil then
+		bullet = BulletEntityData(WeaponFiringData(giverInfo.giver.soldier.weaponsComponent.currentWeapon.weaponModifier.weaponFiringDataModifier.weaponFiring).primaryFire.shot.projectileData)
 	end
 	
 	-- temp. avoid/ignore shotguns
