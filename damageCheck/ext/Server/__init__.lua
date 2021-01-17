@@ -17,7 +17,7 @@ Hooks:Install('Soldier:Damage', 1, function(hook, soldier, info, giverInfo)
 	end
 	
 	-- temp. avoid/ignore shotguns
-	if bullet.hitReactionWeaponType = AntHitReactionWeaponType.AntHitReactionWeaponType_Shotgun then
+	if bullet.hitReactionWeaponType == AntHitReactionWeaponType.AntHitReactionWeaponType_Shotgun then
 		return
 	end	
 		
