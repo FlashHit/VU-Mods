@@ -56,7 +56,7 @@ Hooks:Install('Soldier:Damage', 1, function(hook, soldier, info, giverInfo)
 		local distancePercentage = (shotDistance - bullet.damageFalloffStartDistance) / distanceRange
 		-- 50.0 - 8.0 / 42.0 = 1.00
 
-		damageLimit = bullet.startDamage - (damageFalloffMax * distancePercentage) * multiplier
+		damageLimit = (bullet.startDamage - (damageFalloffMax * distancePercentage)) * multiplier
 		-- 25.0 - (6.6 * 1.00) * 1.0 = 18.4
 
 	end
