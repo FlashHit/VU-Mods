@@ -30,9 +30,9 @@ Hooks:Install('Soldier:Damage', 1, function(hook, soldier, info, giverInfo)
 	local materialRelationDamageData = materialGridItems[materialGrid.materialIndexMap[materialIndexMapIndex2+1]+1]
 
 	local multiplier = 1.0
-	for i,_ in pairs(materialRelationDamageData.physicsPropertyProperties) do
-		if materialRelationDamageData:Is('MaterialRelationDamageData') then
-			multiplier = MaterialRelationDamageData(materialRelationDamageData).physicsPropertyProperties[i].damageProtectionMultiplier
+	for i,physicsPropertyProperty in pairs(materialRelationDamageData.physicsPropertyProperties) do
+		if physicsPropertyProperty:Is('MaterialRelationDamageData') then
+			multiplier = MaterialRelationDamageData(physicsPropertyProperty).damageProtectionMultiplier
 		end
 	end
 
