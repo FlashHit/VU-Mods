@@ -15,12 +15,17 @@ Hooks:Install('Soldier:Damage', 1, function(hook, soldier, info, giverInfo)
 	if giverInfo.giver.soldier.weaponsComponent.currentWeapon.weaponModifier.weaponProjectileModifier ~= nil and giverInfo.giver.soldier.weaponsComponent.currentWeapon.weaponModifier.weaponProjectileModifier.projectileData ~= nil then
 		bullet = BulletEntityData(giverInfo.giver.soldier.weaponsComponent.currentWeapon.weaponModifier.weaponProjectileModifier.projectileData)
 	end
-
+	
+	-- temp. avoid/ignore shotguns
+	if bullet.hitReactionWeaponType = AntHitReactionWeaponType.AntHitReactionWeaponType_Shotgun then
+		return
+	end	
+		
 	local materialIndexMapIndex1 = bullet.materialPair.physicsPropertyIndex
 	if materialIndexMapIndex1 < 0 then
 		materialIndexMapIndex1 = 256 + materialIndexMapIndex1
 	end
-
+	
 	local materialIndexMapIndex2 = MaterialContainerPair(info.damagedMaterial).physicsPropertyIndex
 	if materialIndexMapIndex2 < 0 then
 		materialIndexMapIndex2 = 256 + materialIndexMapIndex2
