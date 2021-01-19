@@ -1,0 +1,10 @@
+{
+	"Name": "Tweaked-UI",
+	"Authors": [ "Flash_Hit", "Janssent" ],
+	"Description": "Removes the blue tint from the UI, and removes the switch screen effect",
+	"Version": "1.0.0",
+	"HasVeniceEXT": true,
+	"Dependencies": {
+		"veniceext": "^1.0.0"
+	}
+}
