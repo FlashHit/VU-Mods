@@ -1,0 +1,10 @@
+{
+    "Name": "Fix No Crosshair Bug",
+    "Authors": [ "Flash_Hit" ],
+    "Description": "After revive the crosshair disappears sometimes.",
+    "Version": "1.0.0",
+    "HasVeniceEXT": true,
+    "Dependencies": {
+        "veniceext": "^1.0.0"
+    }
+}
