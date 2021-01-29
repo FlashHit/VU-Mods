@@ -50,7 +50,6 @@ Hooks:Install('Soldier:Damage', 1, function(hook, soldier, info, giverInfo)
 
 	local damageLimit = bullet.startDamage * multiplier 
 
-
 	local shotDistance = info.position:Distance(info.origin)
 
 	if (shotDistance >= bullet.damageFalloffEndDistance) then
@@ -77,9 +76,17 @@ Hooks:Install('Soldier:Damage', 1, function(hook, soldier, info, giverInfo)
 		damageLimit = damageLimit * weaponNumBullets
 	end
 
-	if (damageLimit < info.damage - 0.5) then
-		info.damage = damageLimit
-		hook:Pass(soldier, info, giverInfo)
+	local damageTolerance = 1.0 * multiplier * weaponNumBullets
+	if (damageLimit < (info.damage - damageTolerance)) then
+		if damageLimit > ((info.damage / 2) - damageTolerance) and damageLimit < ((info.damage / 2) + damageTolerance) then
+			print("Double Damage: " .. giverInfo.giver.name .. " passed the damageLimit (" .. tostring(damageLimit) .. ") when we expected: " .. info.damage)
+			info.damage = damageLimit
+			hook:Pass(soldier, info, giverInfo)
+		else
+			print("LOGGED: " .. giverInfo.giver.name .. " passed the damageLimit (" .. tostring(damageLimit) .. ") when we expected: " .. info.damage)
+			info.damage = damageLimit
+			hook:Pass(soldier, info, giverInfo)
+		end
 	end
 end)
 
