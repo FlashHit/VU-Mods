@@ -1,0 +1,10 @@
+{
+	"Name": "ServerPerfomanceHandler",
+	"Authors": [ "Flash_Hit" ],
+	"Description": "Reduced max player count based on fps",
+	"Version": "1.0.0",
+	"HasVeniceEXT": true,
+	"Dependencies": {
+		"veniceext": "^1.0.0"
+	}
+}
