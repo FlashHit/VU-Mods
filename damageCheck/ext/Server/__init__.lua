@@ -21,7 +21,12 @@ Hooks:Install('Soldier:Damage', 1, function(hook, soldier, info, giverInfo)
 	-- temp. avoid/ignore shotguns
 	if bullet.hitReactionWeaponType == AntHitReactionWeaponType.AntHitReactionWeaponType_Shotgun then
 		return
-	end	
+	end
+		
+	local weaponNumBullets = WeaponFiringData(giverInfo.weaponFiring).primaryFire.shot.numberOfBulletsPerShell
+	if giverInfo.giver.soldier.weaponsComponent.currentWeapon.weaponModifier.weaponShotModifier ~= nil and giverInfo.giver.soldier.weaponsComponent.currentWeapon.weaponModifier.weaponShotModifier.numberOfBulletsPerShell ~= nil then
+		weaponNumBullets = giverInfo.giver.soldier.weaponsComponent.currentWeapon.weaponModifier.weaponShotModifier.numberOfBulletsPerShell
+	end
 		
 	local materialIndexMapIndex1 = bullet.materialPair.physicsPropertyIndex
 	if materialIndexMapIndex1 < 0 then
@@ -66,6 +71,10 @@ Hooks:Install('Soldier:Damage', 1, function(hook, soldier, info, giverInfo)
 		damageLimit = (bullet.startDamage - (damageFalloffMax * distancePercentage)) * multiplier
 		-- 25.0 - (6.6 * 1.00) * 1.0 = 18.4
 
+	end
+		
+	if (weaponNumBullets > 1) then
+		damageLimit = damageLimit * weaponNumBullets
 	end
 
 	if (damageLimit < info.damage - 0.5) then
