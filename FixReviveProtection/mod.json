@@ -1,0 +1,9 @@
+{
+	"Name": "Fix Revive Protection",
+	"Authors": ["Flash_Hit"],
+	"Description": "Fixes the VU extra revive protection problem.",
+	"URL": "none",
+	"Version": "1.0.0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}
