@@ -1,0 +1,9 @@
+{
+	"Name": "Fix Flag UI Stuttering",
+	"Authors": ["Flash_Hit"],
+	"Description": "Changes the updates per second for the flag icons",
+	"URL": "none",
+	"Version": "1.0.0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}
