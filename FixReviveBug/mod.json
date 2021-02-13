@@ -1,0 +1,9 @@
+{
+	"Name": "Fix Revive Bug",
+	"Authors": ["Flash_Hit"],
+	"Description": "Fixes the revive bug by unspawning the medkit on top of the corpse.",
+	"URL": "none",
+	"Version": "1.0.0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}
