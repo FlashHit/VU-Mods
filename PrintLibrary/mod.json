@@ -1,0 +1,9 @@
+{
+	"Name": "PrintLibrary",
+	"Authors": ["Flash_Hit"],
+	"Description": "Printing stuff was never easier.",
+	"URL": "none",
+	"Version": "1.0.0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}
