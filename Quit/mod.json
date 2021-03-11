@@ -1,0 +1,9 @@
+{
+	"Name": "Quit",
+	"Authors": ["Flash_Hit", "Janssent"],
+	"Description": "Quit ActionNode example",
+	"URL": "none",
+	"Version": "1.0.0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}
