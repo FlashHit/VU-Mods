@@ -1,0 +1,9 @@
+{
+	"Name": "Deploy",
+	"Authors": ["Flash_Hit", "Janssent"],
+	"Description": "Trigger the spawn button",
+	"URL": "none",
+	"Version": "1.0.0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}
