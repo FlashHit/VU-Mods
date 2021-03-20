@@ -1,0 +1,9 @@
+{
+	"Name": "Player spawn",
+	"Authors": ["Flash_Hit"],
+	"Description": "Spawning players at spawnpoints",
+	"URL": "none",
+	"Version": "1.0.0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}
