@@ -1,0 +1,9 @@
+{
+	"Name": "MCOM Events",
+	"Authors": ["Flash_Hit"],
+	"Description": "MCOM Events.",
+	"URL": "none",
+	"Version": "1.0.0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}
