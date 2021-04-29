@@ -1,0 +1,11 @@
+{
+    "Name": "In-Game FreeCam",
+    "Description": "In-Game Freecam without spawning.",
+    "Authors": [ "Flash_Hit" ],
+    "Version": "1.0.0",
+    "HasVeniceEXT": true,
+    "HasWebUI": true,
+    "Dependencies": {
+        "veniceext": "^1.0.8"
+    }
+}
