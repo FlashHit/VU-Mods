@@ -1,0 +1,9 @@
+{
+	"Name": "Simple-Spectator",
+	"Authors": ["Flash_Hit"],
+	"Description": "Just a simple mod using SpectatorManager.",
+	"URL": "none",
+	"Version": "1.0.0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}
