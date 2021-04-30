@@ -1,0 +1,11 @@
+{
+    "Name": "ESC Menu",
+    "Description": "Always access to the esc menu.",
+    "Authors": [ "Flash_Hit" ],
+    "Version": "1.0.0",
+    "HasVeniceEXT": true,
+    "HasWebUI": false,
+    "Dependencies": {
+        "veniceext": "^1.0.8"
+    }
+}
