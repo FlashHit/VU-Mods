@@ -1,0 +1,9 @@
+{
+	"Name": "Is Hot Reload?",
+	"Authors": ["Flash_Hit"],
+	"Description": "Get if the mod was hot reloaded or not.",
+	"URL": "none",
+	"Version": "1.0.0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}
