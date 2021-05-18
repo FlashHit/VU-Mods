@@ -22,7 +22,7 @@ end
 
 function ReviveLimiter:OnHealthAction(soldier, action)
 	if action == 6 then
-		self.timeOfDeath = os.date ("%H")*3600 + os.date ("%M")*60 + os.date ("%S")
+		self.timeOfDeath = SharedUtils:GetTime()
 		self.differenceSeconds = self.timeOfDeath - self.timeOfLastDeath
 		if self.differenceSeconds >= self.coolDownSeconds then
 			self.deathCounter = 0
@@ -36,4 +36,4 @@ function ReviveLimiter:OnHealthAction(soldier, action)
 		end
 	end
 end
-g_reviveLimiter = ReviveLimiter()
+g_ReviveLimiter = ReviveLimiter()
