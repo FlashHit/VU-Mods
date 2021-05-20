@@ -1,0 +1,12 @@
+{
+	"Name": "NoSpawnProtection",
+	"Authors": [ "Flash_Hit" ],
+	"Description": "Disables the vanilla spawn protection of 2 seconds",
+	"URL": "none",
+	"Version": "1.0.0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true,
+	"Dependencies": {
+		"veniceext": "^1.0.0"
+	}
+}
