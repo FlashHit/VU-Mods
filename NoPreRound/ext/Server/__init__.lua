@@ -1,14 +1,14 @@
-local OnPreRoundEntityDataCallaback = function(p_Instance)
+local OnPreRoundEntityDataCallback = function(p_Instance)
 	p_Instance = PreRoundEntityData(p_Instance)
 	p_Instance:MakeWritable()
 	p_Instance.enabled = false
 end
 
-ResourceManager:RegisterInstanceLoadHandler(Guid('0C342A8C-BCDE-11E0-8467-9159D6ACA94C'), Guid('B3AF5AF0-4703-402C-A238-601E610A0B48'), OnPreRoundEntityDataCallaback)
-ResourceManager:RegisterInstanceLoadHandler(Guid('57F399B3-70DD-11E0-9327-ED63059941A3'), Guid('C328EFDC-AF70-4097-B47C-DF4C32E2EC3C'), OnPreRoundEntityDataCallaback)
-ResourceManager:RegisterInstanceLoadHandler(Guid('9E2ED50A-C01C-49BA-B3BE-9940BD4C5A08'), Guid('15D85ECF-E9F8-414D-A3AD-67E4CD684E6C'), OnPreRoundEntityDataCallaback)
-ResourceManager:RegisterInstanceLoadHandler(Guid('56364B35-5D80-4874-9D74-CCF829D579D9'), Guid('6C21CE10-43DF-4A8C-92DB-19B0F90A61DC'), OnPreRoundEntityDataCallaback)
-ResourceManager:RegisterInstanceLoadHandler(Guid('3255E7F8-98D2-4C86-A581-E5A3C7A16BFF'), Guid('E423309A-1486-4C9B-BEBA-97AA82CF5ACA'), OnPreRoundEntityDataCallaback)
+ResourceManager:RegisterInstanceLoadHandler(Guid('0C342A8C-BCDE-11E0-8467-9159D6ACA94C'), Guid('B3AF5AF0-4703-402C-A238-601E610A0B48'), OnPreRoundEntityDataCallback)
+ResourceManager:RegisterInstanceLoadHandler(Guid('57F399B3-70DD-11E0-9327-ED63059941A3'), Guid('C328EFDC-AF70-4097-B47C-DF4C32E2EC3C'), OnPreRoundEntityDataCallback)
+ResourceManager:RegisterInstanceLoadHandler(Guid('9E2ED50A-C01C-49BA-B3BE-9940BD4C5A08'), Guid('15D85ECF-E9F8-414D-A3AD-67E4CD684E6C'), OnPreRoundEntityDataCallback)
+ResourceManager:RegisterInstanceLoadHandler(Guid('56364B35-5D80-4874-9D74-CCF829D579D9'), Guid('6C21CE10-43DF-4A8C-92DB-19B0F90A61DC'), OnPreRoundEntityDataCallback)
+ResourceManager:RegisterInstanceLoadHandler(Guid('3255E7F8-98D2-4C86-A581-E5A3C7A16BFF'), Guid('E423309A-1486-4C9B-BEBA-97AA82CF5ACA'), OnPreRoundEntityDataCallback)
 
 Events:Subscribe('Level:Loaded', function()
 	-- This is for Conquest tickets etc.
