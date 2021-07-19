@@ -1,0 +1,9 @@
+{
+	"Name": "No PreRound",
+	"Authors": ["Flash_Hit"],
+	"Description": "Disables the preround for every gamemode.",
+	"URL": "none",
+	"Version": "1.0.3",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}
