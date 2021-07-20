@@ -1,0 +1,9 @@
+{
+	"Name": "RemoveLoadingScreen",
+	"Authors": ["Flash_Hit"],
+	"Description": "Removes the loading screen picture, music and text.",
+	"URL": "none",
+	"Version": "1.0.0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}
