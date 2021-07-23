@@ -1,0 +1,9 @@
+{
+	"Name": "LockedFOV",
+	"Authors": ["Flash_Hit"],
+	"Description": "Locks the field of view.",
+	"URL": "none",
+	"Version": "1.0.0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}
