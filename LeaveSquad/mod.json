@@ -1,0 +1,9 @@
+{
+	"Name": "LeaveSquad",
+	"Authors": ["Flash_Hit"],
+	"Description": "Leaving the squad after joining a server and getting automatically put into a squad.",
+	"URL": "none",
+	"Version": "1.0.0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}
