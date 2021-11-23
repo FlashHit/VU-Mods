@@ -1,11 +1,23 @@
+function table.shallow_copy(t)
+	local t2 = {}
+	for k,v in pairs(t) do
+		t2[k] = v
+	end
+	return t2
+end
+
 local adminList = {}
 
 local done = false
 
 local levelLoaded = Events:Subscribe('Level:Loaded', function()
 	if not done then
+		local tempAdminList = table.shallow_copy(adminList)
 		RCON:SendCommand('gameAdmin.load')
 		done = true
+		for l_Name, l_Table in pairs(tempAdminList) do
+			adminList[l_Name] = tempAdminList[l_Name]
+		end
 	end
 end)
 
@@ -37,9 +49,9 @@ RCON:RegisterCommand('gameAdmin.add', RemoteCommandFlag.RequiresLogin, function(
 	end
 	local logString = ""
 	if adminList[name] == nil then
-		logString = "ADD: Player " .. name .. "is now admin with following abilities:"
+		logString = "ADD: Player " .. name .. " is now admin with following abilities:"
 	else
-		logString = "UPDATE: Player " .. name .. "is now admin with following abilities:"
+		logString = "UPDATE: Player " .. name .. " is now admin with following abilities:"
 	end
 	-- create the table for that player
 	adminList[name] = {
