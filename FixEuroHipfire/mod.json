@@ -3,7 +3,7 @@
 	"Authors": ["Flash_Hit"],
 	"Description": "Fixing euro hipfire abuse and knife aimglitching.",
 	"URL": "none",
-	"Version": "1.0.0",
+	"Version": "1.1.0",
 	"HasWebUI": false,
 	"HasVeniceEXT": true
 }
