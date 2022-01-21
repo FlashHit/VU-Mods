@@ -1,0 +1,9 @@
+{
+	"Name": "FixCorpseFootsteps",
+	"Authors": ["Flash_Hit"],
+	"Description": "Fixed the vanilla bug where corpses made footsteps when you don't look at them.",
+	"URL": "none",
+	"Version": "1.0.0",
+	"HasWebUI": false,
+	"HasVeniceEXT": true
+}
