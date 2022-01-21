@@ -33,3 +33,15 @@ Events:Subscribe('Soldier:HealthAction', function(p_Soldier, p_Action)
 		end
 	end
 end)
+
+---@param p_Soldier SoldierEntity
+Events:Subscribe('Soldier:Spawn', function(p_Soldier)
+	if s_RegisterEventCallbacks[p_Soldier.instanceId] then
+		local s_SoundEntity = GetSoundEntity(p_Soldier)
+
+		if s_SoundEntity then
+			s_SoundEntity:UnregisterEventCallback(s_RegisterEventCallbacks[p_Soldier.instanceId])
+			s_RegisterEventCallbacks[p_Soldier.instanceId] = nil
+		end
+	end
+end)
