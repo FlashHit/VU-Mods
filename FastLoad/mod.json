@@ -1,0 +1,14 @@
+{
+    "Name": "FastLoad",
+    "Description": "Faster loading time",
+    "Version": "1.0.0",
+    "Authors": [
+        "Flash_Hit"
+    ],
+    "URL": "https://veniceunleashed.net",
+    "HasVeniceEXT": true,
+    "HasWebUI": false,
+    "Dependencies": {
+        "veniceext": "^1.0.0"
+    }
+}

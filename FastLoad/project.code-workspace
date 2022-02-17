@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "Shared",
+			"path": "ext\\Shared"
+		}
+	],
+    "settings": {
+        "Lua.workspace.maxPreload": 10000
+    }
+}
