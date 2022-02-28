@@ -1,0 +1,14 @@
+{
+    "Name": "PropertyChanged",
+    "Description": "This mod template will help you get started with VU modding by providing you with type information within VSCode",
+    "Version": "0.0.1",
+    "Authors": [
+        "Flash_Hit"
+    ],
+    "URL": "https://veniceunleashed.net",
+    "HasVeniceEXT": true,
+    "HasWebUI": false,
+    "Dependencies": {
+        "veniceext": "^1.0.0"
+    }
+}

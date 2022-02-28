@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"name": "Shared",
+			"path": "ext\\Shared"
+		},
+		{
+			"name": "Server",
+			"path": "ext\\Server"
+		}
+	],
+	"settings": {
+		"Lua.workspace.maxPreload": 10000,
+		"Lua.diagnostics.libraryFiles": "Disable"
+	},
+	"extensions": {
+		"recommendations": [
+			"Imposter.vscode-lua-vu"
+		]
+	}
+}
