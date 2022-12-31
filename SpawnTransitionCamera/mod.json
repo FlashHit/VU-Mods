@@ -1,0 +1,14 @@
+{
+    "Name": "SpawnTransitionCamera",
+    "Description": "Camera transition on spawn.",
+    "Version": "1.0.0",
+    "Authors": [
+        "Flash"
+    ],
+    "URL": "https://veniceunleashed.net",
+    "HasVeniceEXT": true,
+    "HasWebUI": false,
+    "Dependencies": {
+        "veniceext": "^1.0.0"
+    }
+}
