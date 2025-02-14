@@ -1,0 +1,5 @@
+# DebugHitBoxes
+
+## Commands
+- !enable
+- !disable

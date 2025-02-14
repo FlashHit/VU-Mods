@@ -1,0 +1,14 @@
+{
+    "Name": "DebugHitBoxes",
+    "Description": "This mod allows you to view at the soldier hitboxes using the DebugRenderer.",
+    "Version": "0.0.1",
+    "Authors": [
+        "Flash_Hit"
+    ],
+    "URL": "https://veniceunleashed.net",
+    "HasVeniceEXT": true,
+    "HasWebUI": false,
+    "Dependencies": {
+        "veniceext": "^1.0.0"
+    }
+}
